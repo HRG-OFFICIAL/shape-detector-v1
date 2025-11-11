@@ -96,7 +96,8 @@ export function evaluateDetection(detected: any[], groundTruth: GroundTruthShape
     }
   }
   
-  const precision = detected.length > 0 ? truePositives / detected.length : 0;
+  // Handle edge case: if both detected and ground truth are empty, it's a perfect match
+  const precision = detected.length > 0 ? truePositives / detected.length : (groundTruth.length === 0 ? 1 : 0);
   const recall = groundTruth.length > 0 ? truePositives / groundTruth.length : 1;
   const f1Score = precision + recall > 0 ? 2 * (precision * recall) / (precision + recall) : 0;
   
