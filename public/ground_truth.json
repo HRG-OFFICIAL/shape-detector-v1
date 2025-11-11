@@ -1,0 +1,453 @@
+{
+  "metadata": {
+    "description": "Ground truth data for shape detection challenge",
+    "generated_at": "2025-11-04T09:49:20.725Z",
+    "coordinate_system": "Canvas coordinates (0,0 at top-left)",
+    "tolerance_guidelines": {
+      "center_point": "±5 pixels acceptable",
+      "bounding_box": "IoU ≥ 0.8 for excellent, ≥ 0.6 for good",
+      "area": "±10% acceptable",
+      "confidence": "≥0.8 for clear shapes, ≥0.6 for complex scenes"
+    }
+  },
+  "images": {
+    "circle_simple.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "circle",
+          "center": {
+            "x": 100,
+            "y": 100
+          },
+          "radius": 50,
+          "bounding_box": {
+            "x": 50,
+            "y": 50,
+            "width": 100,
+            "height": 100
+          },
+          "area": 7853.981633974483,
+          "confidence_expected": 0.95,
+          "notes": "Perfect circle, should be easy to detect"
+        }
+      ]
+    },
+    "triangle_basic.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "triangle",
+          "vertices": [
+            {
+              "x": 100,
+              "y": 30
+            },
+            {
+              "x": 25,
+              "y": 160
+            },
+            {
+              "x": 175,
+              "y": 160
+            }
+          ],
+          "center": {
+            "x": 100,
+            "y": 116.67
+          },
+          "bounding_box": {
+            "x": 25,
+            "y": 30,
+            "width": 150,
+            "height": 130
+          },
+          "area": 9750,
+          "confidence_expected": 0.92,
+          "notes": "Equilateral-like triangle"
+        }
+      ]
+    },
+    "rectangle_square.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "rectangle",
+          "center": {
+            "x": 100,
+            "y": 100
+          },
+          "bounding_box": {
+            "x": 40,
+            "y": 40,
+            "width": 120,
+            "height": 120
+          },
+          "area": 14400,
+          "confidence_expected": 0.98,
+          "notes": "Perfect square, should be detected as rectangle"
+        }
+      ]
+    },
+    "pentagon_regular.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "pentagon",
+          "center": {
+            "x": 100,
+            "y": 102
+          },
+          "vertices": [
+            {
+              "x": 100,
+              "y": 37
+            },
+            {
+              "x": 161.818673559185,
+              "y": 81.91389536562842
+            },
+            {
+              "x": 138.20604139901076,
+              "y": 154.5861046343716
+            },
+            {
+              "x": 61.79395860098926,
+              "y": 154.5861046343716
+            },
+            {
+              "x": 38.18132644081501,
+              "y": 81.91389536562843
+            }
+          ],
+          "radius": 65,
+          "bounding_box": {
+            "x": 35,
+            "y": 37,
+            "width": 130,
+            "height": 130
+          },
+          "area": 29076.06806995354,
+          "confidence_expected": 0.88,
+          "notes": "Regular pentagon"
+        }
+      ]
+    },
+    "star_five_point.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "star",
+          "center": {
+            "x": 100,
+            "y": 100
+          },
+          "vertices": [
+            {
+              "x": 100,
+              "y": 30
+            },
+            {
+              "x": 117.6335575687742,
+              "y": 75.72949016875157
+            },
+            {
+              "x": 166.57395614066075,
+              "y": 78.36881039375368
+            },
+            {
+              "x": 128.5316954888546,
+              "y": 109.27050983124842
+            },
+            {
+              "x": 141.14496766047313,
+              "y": 156.63118960624632
+            },
+            {
+              "x": 100,
+              "y": 130
+            },
+            {
+              "x": 58.855032339526886,
+              "y": 156.63118960624632
+            },
+            {
+              "x": 71.46830451114539,
+              "y": 109.27050983124843
+            },
+            {
+              "x": 33.426043859339245,
+              "y": 78.36881039375369
+            },
+            {
+              "x": 82.3664424312258,
+              "y": 75.72949016875158
+            }
+          ],
+          "outer_radius": 70,
+          "inner_radius": 30,
+          "bounding_box": {
+            "x": 30,
+            "y": 30,
+            "width": 140,
+            "height": 140
+          },
+          "area": 4993.046710549556,
+          "confidence_expected": 0.85,
+          "notes": "Five-pointed star with convex-concave pattern"
+        }
+      ]
+    },
+    "mixed_shapes_simple.png": {
+      "image_dimensions": {
+        "width": 250,
+        "height": 200
+      },
+      "shapes": [
+        {
+          "type": "circle",
+          "center": {
+            "x": 50,
+            "y": 50
+          },
+          "radius": 30,
+          "bounding_box": {
+            "x": 20,
+            "y": 20,
+            "width": 60,
+            "height": 60
+          },
+          "area": 2827.4333882308138,
+          "confidence_expected": 0.94,
+          "notes": "Small circle, top-left"
+        },
+        {
+          "type": "triangle",
+          "vertices": [
+            {
+              "x": 155,
+              "y": 15
+            },
+            {
+              "x": 120,
+              "y": 85
+            },
+            {
+              "x": 190,
+              "y": 85
+            }
+          ],
+          "center": {
+            "x": 155,
+            "y": 61.67
+          },
+          "bounding_box": {
+            "x": 120,
+            "y": 15,
+            "width": 70,
+            "height": 70
+          },
+          "area": 2450,
+          "confidence_expected": 0.91,
+          "notes": "Triangle, top-right"
+        },
+        {
+          "type": "rectangle",
+          "center": {
+            "x": 100,
+            "y": 135
+          },
+          "bounding_box": {
+            "x": 60,
+            "y": 110,
+            "width": 80,
+            "height": 50
+          },
+          "area": 4000,
+          "confidence_expected": 0.96,
+          "notes": "Rectangle, bottom"
+        }
+      ]
+    },
+    "complex_scene.png": {
+      "image_dimensions": {
+        "width": 300,
+        "height": 250
+      },
+      "shapes": [
+        {
+          "type": "circle",
+          "center": {
+            "x": 90,
+            "y": 105
+          },
+          "radius": 45,
+          "bounding_box": {
+            "x": 45,
+            "y": 60,
+            "width": 90,
+            "height": 90
+          },
+          "area": 6361.725123519332,
+          "confidence_expected": 0.87,
+          "notes": "Circle with some noise lines nearby"
+        },
+        {
+          "type": "rectangle",
+          "center": {
+            "x": 200,
+            "y": 70
+          },
+          "bounding_box": {
+            "x": 150,
+            "y": 40,
+            "width": 100,
+            "height": 60
+          },
+          "area": 6000,
+          "confidence_expected": 0.82,
+          "notes": "Rectangle, some noise in scene"
+        },
+        {
+          "type": "star",
+          "center": {
+            "x": 210,
+            "y": 172
+          },
+          "outer_radius": 40,
+          "inner_radius": 18,
+          "bounding_box": {
+            "x": 170,
+            "y": 132,
+            "width": 80,
+            "height": 80
+          },
+          "area": 1711.9017293312763,
+          "confidence_expected": 0.78,
+          "notes": "Star with noise lines in background"
+        }
+      ]
+    },
+    "edge_cases.png": {
+      "image_dimensions": {
+        "width": 250,
+        "height": 180
+      },
+      "shapes": [
+        {
+          "type": "triangle",
+          "vertices": [
+            {
+              "x": 25,
+              "y": 10
+            },
+            {
+              "x": 10,
+              "y": 35
+            },
+            {
+              "x": 40,
+              "y": 35
+            }
+          ],
+          "center": {
+            "x": 25,
+            "y": 26.67
+          },
+          "bounding_box": {
+            "x": 10,
+            "y": 10,
+            "width": 30,
+            "height": 25
+          },
+          "area": 375,
+          "confidence_expected": 0.75,
+          "notes": "Very small triangle - challenging to detect"
+        },
+        {
+          "type": "rectangle",
+          "center": {
+            "x": 135,
+            "y": 80
+          },
+          "bounding_box": {
+            "x": 80,
+            "y": 45,
+            "width": 110,
+            "height": 70
+          },
+          "area": 7700,
+          "confidence_expected": 0.89,
+          "rotation_degrees": 30,
+          "notes": "Rotated rectangle - tests rotation invariance"
+        }
+      ]
+    },
+    "noisy_background.png": {
+      "image_dimensions": {
+        "width": 350,
+        "height": 220
+      },
+      "shapes": [
+        {
+          "type": "circle",
+          "center": {
+            "x": 120,
+            "y": 130
+          },
+          "radius": 50,
+          "bounding_box": {
+            "x": 70,
+            "y": 80,
+            "width": 100,
+            "height": 100
+          },
+          "area": 7853.981633974483,
+          "confidence_expected": 0.68,
+          "notes": "Circle on noisy background - tests noise robustness"
+        },
+        {
+          "type": "pentagon",
+          "center": {
+            "x": 245,
+            "y": 92
+          },
+          "radius": 45,
+          "bounding_box": {
+            "x": 200,
+            "y": 47,
+            "width": 90,
+            "height": 90
+          },
+          "area": 13935.866944770632,
+          "confidence_expected": 0.72,
+          "notes": "Pentagon on noisy background"
+        }
+      ]
+    },
+    "no_shapes.png": {
+      "image_dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "shapes": [],
+      "notes": "Contains only lines and text - no geometric shapes to detect",
+      "false_positive_test": true
+    }
+  }
+}
